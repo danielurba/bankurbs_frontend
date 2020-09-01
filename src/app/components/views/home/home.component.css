@@ -1,0 +1,11 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.movimentation {
+    display: flex;
+    flex-direction: column;
+}

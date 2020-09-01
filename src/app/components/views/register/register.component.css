@@ -1,0 +1,11 @@
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.register nav, form {
+    display: flex;
+    flex-direction: column;
+}

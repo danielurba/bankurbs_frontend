@@ -1,0 +1,19 @@
+<div class="header">
+    <section>
+        <img src="../../../../assets/img/bankurbs.png" alt="BankUrbs" width="100" height="100">
+    </section>
+    <nav>
+        <a routerLink="/">Home</a>
+        <a routerLink="/login">Acessar Conta</a>
+        <a routerLink="/register">Criar Conta</a>
+    </nav>
+    <div class="menuser">
+        <div *ngIf="user[1].userIsTrue" class="menuinfos">
+            <span>Nome: {{ user[0].name }}</span>
+            <span>Saldo: R$ {{ user[0].money }}</span>
+            <span>Agência: {{ user[0].agencia}}</span>
+            <span>N-Conta:{{user[0].conta}}</span>
+        </div>
+        <button (click)="resetStore()">Sair</button>
+    </div>
+</div>

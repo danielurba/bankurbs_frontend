@@ -1,0 +1,11 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login nav {
+    display: flex;
+    flex-direction: column;
+}
