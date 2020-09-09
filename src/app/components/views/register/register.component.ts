@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from 'src/app/config/users.service'
 import { User } from 'src/app/config/users.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +18,7 @@ export class RegisterComponent implements OnInit {
     password: ""
   }
 
-  constructor(private users: UsersService) { }
+  constructor(private users: UsersService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -33,6 +34,7 @@ export class RegisterComponent implements OnInit {
     this.getRandomAcount()
     this.users.createUsers(this.user).subscribe(() => {
       alert('Usuário Criado com sucesso !')
+      this.router.navigate(["/login"])
     }, erro => {
         alert(erro.error)
     })

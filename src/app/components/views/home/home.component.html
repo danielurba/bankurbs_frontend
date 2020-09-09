@@ -1,27 +1,7 @@
 <div class="home">
-    <nav>
-        <h3>Lista de Usuários</h3>
-        <ul>
-            <li *ngFor="let users of getusers">
-                Usuário:{{ users.name }} agencia:{{ users.agencia }}
-                conta:{{ users.conta}} Dinheiro:{{ users.money }}
-            </li>
-        </ul>
+    <nav class="intro">
+        <h2>Seja bem-Vindo ao BankUrbs</h2>
+        <h3>Seu banco. Sua vida.</h3>
+        <p>Um banco revolucionário para ajudar você com suas finanças.</p>
     </nav>
-    <div *ngIf="user[1].userIsTrue" class="movimentation">
-        <span>
-            <input [(ngModel)]="operation.depositar" placeholder="Valor do depósito...">
-            <button (click)="deposit('soma')">Depositar</button>
-        </span>
-        <span>
-            <input [(ngModel)]="operation.sacar" type="text" placeholder="Valor para sacar...">
-            <button (click)="deposit('subtration')">Sacar</button>
-        </span>
-        <span>
-            <input [(ngModel)]="transfer.money" placeholder="Valor para Transferencia...">
-            <input [(ngModel)]="transfer.agencia" placeholder="Agência...">
-            <input [(ngModel)]="transfer.conta" placeholder="Conta...">
-            <button (click)="transferencia()">Transferir</button>
-        </span>
-    </div>
 </div>

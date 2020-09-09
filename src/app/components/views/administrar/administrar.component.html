@@ -1,0 +1,27 @@
+<div class="admin">
+    <div *ngIf="user[1].userIsTrue" class="movimentation">
+        <span>
+            <h3>Depósitos</h3>
+            <input [(ngModel)]="operation.depositar" placeholder="Valor do depósito...">
+            <button (click)="deposit('soma')">Depositar</button>
+        </span>
+        <span>
+            <h3>Saques</h3>
+            <input [(ngModel)]="operation.sacar" type="text" placeholder="Valor para sacar...">
+            <button (click)="withdraw()">Sacar</button>
+        </span>
+        <span>
+            <h3>Transferências</h3>
+            <input [(ngModel)]="initialTransfer.money" placeholder="Valor para Transferencia...">
+            <input [(ngModel)]="initialTransfer.agencia" placeholder="Agência...">
+            <input [(ngModel)]="initialTransfer.conta" placeholder="Conta...">
+            <button (click)="transferencia()">Transferir</button>
+        </span>
+        <span>
+            <h3>Excluir conta !</h3>
+            <input [(ngModel)]="login.email" placeholder="Email para deletar conta...">
+            <input [(ngModel)]="login.password" placeholder="Senha para deletar conta">
+            <button (click)="deleteAccount()">Deletar conta</button>
+        </span>
+    </div>
+</div>

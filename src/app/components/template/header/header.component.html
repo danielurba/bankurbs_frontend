@@ -7,13 +7,14 @@
         <a routerLink="/login">Acessar Conta</a>
         <a routerLink="/register">Criar Conta</a>
     </nav>
-    <div class="menuser">
-        <div *ngIf="user[1].userIsTrue" class="menuinfos">
-            <span>Nome: {{ user[0].name }}</span>
-            <span>Saldo: R$ {{ user[0].money }}</span>
-            <span>Agência: {{ user[0].agencia}}</span>
-            <span>N-Conta:{{user[0].conta}}</span>
+    <div *ngIf="user[1].userIsTrue" class="menuser">
+        <div class="menuinfos">
+            <span>| Olá, {{ user[0].name }}. |</span>
+            <span>| Saldo: R$ {{ user[0].money }} |</span>
+            <span>| Agência: {{ user[0].agencia}} |</span>
+            <span>| Conta: {{user[0].conta}} |</span>
         </div>
+        <button routerLink="/administration">Administrar</button>
         <button (click)="resetStore()">Sair</button>
     </div>
 </div>

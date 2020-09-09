@@ -12,7 +12,7 @@ import { Transfer } from './transferUp.model';
 })
 export class UsersService {
 
-  baseUrl = "http://localhost:8080"
+  baseUrl = "http://15.228.18.35:8080"
 
   userIs = [{name: null, money: null},{userIsTrue: false}]
 
@@ -46,12 +46,16 @@ export class UsersService {
     return this.http.get<GetUsers[]>(this.baseUrl + "/users")
   }
 
-  loginUsers(login: Login): Observable<Login> {
-    return this.http.post<Login>(this.baseUrl + "/login", login)
-  }
-
   updateUsers(update: Update): Observable<Update> {
     return this.http.put<Update>(this.baseUrl + "/update",update)
+  }
+
+  deleteUsers(login: Login): Observable<Login> {
+    return this.http.post<Login>(this.baseUrl + "/delete", login)
+  }
+
+  loginUsers(login: Login): Observable<Login> {
+    return this.http.post<Login>(this.baseUrl + "/login", login)
   }
 
   readAccount(transfer: Transfer): Observable<Transfer> {

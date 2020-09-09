@@ -1,7 +1,10 @@
 <div class="login">
     <nav>
-        <input placeholder="E-mail..." [(ngModel)]="login.email" name="name">
-        <input placeholder="Senha..." [(ngModel)]="login.password" name="password">
+        <h3>Acessar conta</h3>
+        <form class="inputs">
+            <input placeholder="E-mail..." [(ngModel)]="login.email" name="name">
+            <input placeholder="Senha..." [(ngModel)]="login.password" name="password">
+        </form>
         <button (click)="loginUser()">Entrar</button>
     </nav>
 </div>
